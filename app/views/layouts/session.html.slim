@@ -16,6 +16,10 @@ html
       / *:not(path):not(g) { color: hsla(210, 100%, 100%, 0.9) !important; background: hsla(210, 100%,  50%, 0.5) !important; outline: solid 0.25rem hsla(210, 100%, 100%, 0.5) !important; box-shadow: none !important; filter: none !important; }
 
   body
+    /! Notifications
+    p.notice.center= notice
+    p.alert.center= alert
+
     section.hero.is-danger.is-fullheight.is-bold
       .hero-body
         .container
@@ -25,8 +29,5 @@ html
                 | titra
               .subtitle.is-size-7.center
                 | Time Tracker
-              .subsubtitle.is-small.center
-                p.notice= notice
-                p.alert= alert
               = yield
 
