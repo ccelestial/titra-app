@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 2.5'
 # Use bulma rails
 gem 'bulma-rails', '~> 0.7.1'
 
+# Use slim rails for html formatting
+gem "slim-rails"
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
