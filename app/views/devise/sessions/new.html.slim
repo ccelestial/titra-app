@@ -1,0 +1,28 @@
+.columns
+  .column
+    = form_for resource, as: resource_name, url: session_path(resource_name) do |f|
+      .field
+        / label.label= f.label :email
+        .control.has-icons-left
+          = f.email_field :email, autofocus: true, autocomplete: 'email', class: 'input', placeholder: :email
+          span.icon.is-small.is-left
+            i.fas.fa-envelope
+
+      .field
+        / label.label= f.label :password
+        .control.has-icons-left
+          = f.password_field :password, autocomplete: 'current-password', class: 'input', placeholder: :password
+          span.icon.is-small.is-left
+            i.fas.fa-lock
+
+      / .field
+      /   .control
+      /     label.checkbox
+      /       = f.check_box :remember_me, class: 'checkbox'
+      /       = f.label :remember_me
+
+      .field
+        .control
+          = f.submit 'Log in', class: 'button is-link has-background-black is-pulled-right'
+
+  / = render 'devise/shared/links'

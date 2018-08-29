@@ -16,20 +16,17 @@ html
       / *:not(path):not(g) { color: hsla(210, 100%, 100%, 0.9) !important; background: hsla(210, 100%,  50%, 0.5) !important; outline: solid 0.25rem hsla(210, 100%, 100%, 0.5) !important; box-shadow: none !important; filter: none !important; }
 
   body
-    /! Notifications
-    p.notice= notice
-    p.alert= alert
-
-    /! HEADER
-    section.hero.is-danger.is-small
-      .hero-body.center
-        .title.has-text-white.has-text-weight-bold.is-size-2
-          | titra
-        .subtitle.has-text-white.is-size-7
-          | Time Tracker
-        .subsubtitle
-          = link_to 'Logout', destroy_user_session_path, method: :delete, class: 'button is-small is-rounded is-black'
-
-    .container
-      = yield
+    section.hero.is-danger.is-fullheight.is-bold
+      .hero-body
+        .container
+          .columns.is-mobile
+            .column.is-full-mobile.is-half-tablet.is-offset-one-quarter-tablet.is-one-third-desktop.is-offset-two-thirds-desktop
+              .title.has-text-weight-bold.is-size-2.center
+                | titra
+              .subtitle.is-size-7.center
+                | Time Tracker
+              .subsubtitle.is-small.center
+                p.notice= notice
+                p.alert= alert
+              = yield
 
