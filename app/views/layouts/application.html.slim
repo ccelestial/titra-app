@@ -17,8 +17,7 @@ html
 
   body
     /! Notifications
-    p.notice.center= notice
-    p.alert.center= alert
+    = render partial: 'layouts/notifications', locals: { alert: alert, notice: notice  }
 
     /! HEADER
     section.hero.is-danger.is-small
