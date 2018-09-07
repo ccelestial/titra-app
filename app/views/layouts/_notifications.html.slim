@@ -1,0 +1,8 @@
+- if alert
+  .flash-notification.notification.is-danger
+    button.delete
+    p.alert.center= alert
+- elsif notice
+  .flash-notification.notification.is-info
+    button.delete
+    p.alert.center= notice
