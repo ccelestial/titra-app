@@ -17,10 +17,9 @@ html
 
   body
     /! Notifications
-    p.notice.center= notice
-    p.alert.center= alert
+    = render partial: 'layouts/notifications', locals: { alert: alert, notice: notice  }
 
-    section.hero.is-danger.is-fullheight.is-bold
+    section.hero.is-primary.is-fullheight.is-bold
       .hero-body
         .container
           .columns.is-mobile
