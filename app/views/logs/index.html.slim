@@ -1,17 +1,2 @@
-table
-  tbody
-    tr
-      th Description
-      th Start
-      th End
-  
-  - if @logs
-    - @logs.each do |log|
-      tr
-        td= log.description
-        td= log.start_at
-        td= log.end_at
-  
-  - else
-    tr
-      td No record(s) yet.
+= render partial: 'form'
+= render partial: 'list'
