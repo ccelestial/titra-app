@@ -1,5 +1,6 @@
 class LogsController < ApplicationController
   def index
+    @log = Log.new
     @logs = Log.all
   end
 
@@ -15,7 +16,7 @@ class LogsController < ApplicationController
       flash[:error] = "Error starting #{log_params[:description]}"
     end
 
-    rendirect_to :index
+    redirect_to root_path
   end
 
   private
